@@ -41,8 +41,8 @@ export default function TeamMembers() {
               name="Rishika Bhatt"
               role="AI/ML Developer"
               college="Nirma University (2027)"
-              email="Rishima@gmail.com"
-              github="https://github.com/rishika"
+              email="Rishika08122005@gmail.com"
+              github="https://github.com/0812"
               src={'/assets/rishika.jpg'}
             />
             <TeamMember
