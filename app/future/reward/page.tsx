@@ -7,7 +7,7 @@ import React from 'react'
 function reward() {
     return (
         <div className="flex flex-col items-center p-4 pt-20 bg-gray-800 text-white dark:bg-gray-900">
-               <Image src="/assets/reward-temp.png" alt="Reward System" className="mb-4" width={800} height={400} />
+               <Image src="https://i.imgur.com/AKCD3Wj.png" alt="Reward System" className="mb-4" width={800} height={400} />
             <p className="text-center mb-4">
                 This webpage tracks the reward system to enhance user engagement on public welfare apps by providing a reward system to users.
             </p>
