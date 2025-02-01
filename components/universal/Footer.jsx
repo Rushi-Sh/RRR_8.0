@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Globe2 } from 'lucide-react';
+import Image from 'next/image';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -68,9 +69,14 @@ const Footer = () => {
 
                 <div className="mt-8 border-t border-gray-800 pt-8">
                     <div className="flex items-center justify-center">
-                        <Globe2 className="h-6 w-6 text-gray-400" />
+                    <Image 
+                        src="/assets/US.png" 
+                        width={50}
+                        height={50}
+                        alt='logo'
+                        />
                         <span className="ml-2 text-gray-400">
-                            © {currentYear} AccuLingo. All rights reserved.
+                            © {currentYear} UrbanSnap. All rights reserved.
                         </span>
                     </div>
                 </div>

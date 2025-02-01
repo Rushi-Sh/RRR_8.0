@@ -1,5 +1,6 @@
-import Hero from '@/components/home/Hero';
-import TeamMembers from '@/components/home/TeamMember';
+
+import Hero from '../components/home/Hero';
+import TeamMembers from '../components/home/TeamMember';
 
 export default function Home() {
   return (

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { ChevronRight, Play } from 'lucide-react';
-import { scrollToElement } from '@/lib/smoothScroll';
+
 import Link from 'next/link';
 
 const Hero = () => {
@@ -12,10 +12,6 @@ const Hero = () => {
         setIsVisible(true);
     }, []);
 
-    const handleScrollToDemo = (e) => {
-        e.preventDefault();
-        scrollToElement('demo');
-    };
 
     return (
         <div className="bg-gradient-to-r from-gray-800 to-gray-900 pt-32 pb-16">
