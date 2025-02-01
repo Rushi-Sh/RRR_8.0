@@ -20,10 +20,40 @@ const NavBar = () => {
 
     useEffect(() => {
         switch (pathname) {
- 
-            case '/features/report' || '/features/schemes':
-                setNavOptions([]); // Set nav options to none for this route
+
+            // NO NAV OPTIONS OR CUSTOM HEADINGS options
+            case '/features/report':
+                setNavOptions([]);
                 break;
+            case '/features/schemes':
+                setNavOptions([]);
+                break;
+
+            case '/analytics/tableau':
+                setNavOptions([]);
+                break;
+            case '/analytics/docChatbot':
+                setNavOptions([]);
+                break;
+
+            case '/features/schemes':
+                setNavOptions([]);
+                break;
+            case '/about/college':
+                setNavOptions([]);
+                break;
+            case '/about/info':
+                setNavOptions([]);
+                break;
+            case '/future/reward':
+                setNavOptions([]);
+                break;
+            case '/future/campaigns':
+                setNavOptions([]);
+                break;
+
+
+            // CUSTOM NAV-OPTIONS
             case '/features':
                 setNavOptions([
                     { label: 'Report problem', href: '/features/report' },
@@ -42,14 +72,14 @@ const NavBar = () => {
                     { label: 'Information about us', href: '/about/info' },
                 ]);
                 break;
-            case 'future':
+            case '/future':
                 setNavOptions([
                     { label: 'Reward System', href: '/future/reward' },
                     { label: 'Campaign Streamline', href: '/future/campaigns' },
                 ]);
                 break;
-            
-            
+
+
             default:
                 setNavOptions([
                     { label: 'Features', href: '/features' },
