@@ -4,17 +4,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const TeamMember = ({ name, role, college, email, github, src }) => (
-  <div className="p-6 rounded-xl bg-gray-800 border border-gray-700 hover:border-gray-500 transition-all duration-300 shadow-md">
-    <Image src={src} height={80} width={80} alt={name} className='mx-auto rounded-full mb-3 aspect-square object-cover' />
-    <h3 className="text-lg font-bold text-white mb-1">{name}</h3>
-    <p className="text-indigo-400 font-medium mb-2">{role}</p>
-    <p className="text-gray-300 text-sm mb-2">{college}</p>
-    <div className="flex flex-col gap-1 text-sm">
-      <a href={`mailto:${email}`} className="text-gray-300 hover:text-indigo-400 transition-colors">{email}</a>
-      <a href={github} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-indigo-400 transition-colors">GitHub</a>
+  <div className="p-8 rounded-xl bg-gray-800 border border-gray-700 hover:border-gray-500 transition-all duration-300 shadow-md relative overflow-hidden h-96">
+    <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${src})` }} />
+    <div className="relative z-10 p-4 bg-gray-800 bg-opacity-70 rounded-xl flex flex-col justify-center h-full">
+      <h3 className="text-lg font-bold text-white mb-1">{name}</h3>
+      <p className="text-indigo-400 font-medium mb-2">{role}</p>
+      <p className="text-gray-300 text-sm mb-2">{college}</p>
+      <div className="flex flex-col gap-1 text-sm">
+        <a href={`mailto:${email}`} className="text-gray-300 hover:text-indigo-400 transition-colors">{email}</a>
+        <a href={github} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-indigo-400 transition-colors">GitHub</a>
+      </div>
     </div>
   </div>
 );
+
 
 export default function TeamMembers() {
   return (
@@ -42,7 +45,7 @@ export default function TeamMembers() {
               role="AI/ML Developer"
               college="Nirma University (2027)"
               email="Rishika08122005@gmail.com"
-              github="https://github.com/0812"
+              github="https://github.com/rishika"
               src={'/assets/rishika.jpg'}
             />
             <TeamMember

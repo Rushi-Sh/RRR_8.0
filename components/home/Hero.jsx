@@ -34,7 +34,7 @@ const Hero = () => {
                             href="/features"
                             className="px-8 py-4 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transform transition-transform hover:scale-105 flex items-center"
                         >
-                            Start Features Now
+                            Explore Features Now
                             <ChevronRight className="ml-2" />
                         </Link>
 
@@ -48,8 +48,8 @@ const Hero = () => {
                             <Play className="ml-2 h-4 w-4" />
                         </Link>
                     </div>
-                    <div className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-4">
-
+                    <div className="mt-16">
+                        We have developed an innovative application designed to empower citizens in reporting issues related to public welfare and urbanization. This platform facilitates seamless communication between the community and local authorities, enabling users to easily report problems such as infrastructure deficiencies, environmental concerns, and public service inefficiencies. By leveraging technology, we aim to enhance civic engagement, improve response times, and foster a collaborative approach to urban development. Join us in building a smarter, more responsive city for everyone.
                     </div>
                 </div>
             </div>
