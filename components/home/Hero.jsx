@@ -14,11 +14,10 @@ const Hero = () => {
 
 
     return (
-        <div className="bg-gradient-to-r from-gray-800 to-gray-900 pt-32 pb-16">
+        <div className="bg-gray-900 pt-32 pb-16 min-h-screen">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className={`text-center transform transition-all duration-1000 ${
-                    isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                }`}>
+                <div className={`text-center transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                    }`}>
                     <h1 className="text-5xl font-bold text-white sm:text-6xl md:text-7xl">
                         E-Governance: Building a Smarter Future
                         <span className="text-indigo-400 block mt-2">Overcoming Challenges with Innovation</span>
@@ -50,7 +49,7 @@ const Hero = () => {
                         </Link>
                     </div>
                     <div className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-4">
-                       
+
                     </div>
                 </div>
             </div>
