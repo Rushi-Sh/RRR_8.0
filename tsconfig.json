@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "app/future/campaigns/page.jsx", "app/future/reward/page.jsx", "app/features/schemes/page.jsx", "app/features/report/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]
