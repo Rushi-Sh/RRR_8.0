@@ -1,35 +1,125 @@
+"use client";
 
+import Link from 'next/link';
 import React from 'react';
+import Image from 'next/image';
+import { Container } from '@mui/material';
 
-function features() {
-  return (
-    <div className="bg-gray-800 text-white p-6 pt-20">
-      <h2 className="text-2xl font-bold mb-4 text-center">Application Features</h2>
-      <div className="project-container max-w-6xl mx-auto flex flex-col gap-10">
-        {[
-          { id: 1, title: "Report Problems", description: "Just by clicking one picture" },
-          { id: 2, title: "Inform Authorities", description: "Notify the concerned authorities" },
-          { id: 3, title: "Track Report Status", description: "Keep track of your report status" },
-          { id: 4, title: "Reward System", description: "Earn rewards for your reports" },
-          { id: 5, title: "Stay Updated", description: "Get updates on government schemes" },
-          { id: 6, title: "Take Benefits", description: "Utilize government schemes effectively" },
-          { id: 7, title: "Help Others", description: "Participate in public drives" },
-        ].map((feature) => (
-          <div className="relative w-full h-64 bg-gray-700 shadow-lg overflow-hidden" key={feature.id}>
-            <div className=" absolute text-6xl font-bold text-white z-10 right-4 top-4">{String(feature.id).padStart(2, '0')}</div>
-            <div className="absolute flex flex-col text-white p-4 bottom-0 z-5">
-              <h3 className="text-2xl font-bold">{feature.title}</h3>
-              <p className="italic">{feature.description}</p>
-              <div className="btn-grp mt-2">
-                <button className="btn-pink bg-pink-500 text-white py-2 px-4 rounded">Read More</button>
-              </div>
+function Features() {
+    return (
+        <div className="bg-gray-900 min-h-screen text-white p-6 pt-20">
+            {/* Heading */}
+            <h2 className="text-4xl font-bold mb-8 text-center text-indigo-400">
+                Application Features
+            </h2>
+
+            {/* Features Grid */}
+            <div className="max-w-6xl mx-auto flex flex-col gap-8">
+                {[
+                    {
+                        id: 1,
+                        title: "Report Problems",
+                        description:
+                            "Easily report civic issues like potholes, garbage dumping, or broken streetlights by simply clicking a picture and submitting it through the app.",
+                        url: "/features/report",
+                        imageUrl: "/images/report-problems.jpg", // Add image URL
+                    },
+                    {
+                        id: 2,
+                        title: "Inform Authorities",
+                        description:
+                            "Your reports are automatically forwarded to the concerned authorities, ensuring quick action and resolution.",
+                        url: "#inform-authorities",
+                        imageUrl: "/images/inform-authorities.jpg", // Add image URL
+                    },
+                    {
+                        id: 3,
+                        title: "Track Report Status",
+                        description:
+                            "Monitor the progress of your reports in real-time, from submission to resolution, with regular updates.",
+                        url: "#track-status",
+                        imageUrl: "/images/track-status.jpg", // Add image URL
+                    },
+                    {
+                        id: 4,
+                        title: "Reward System",
+                        description:
+                            "Earn points and rewards for every valid report you submit, which can be redeemed for exclusive benefits.",
+                        url: "/future/reward",
+                        imageUrl: "https://i.imgur.com/AKCD3Wj.png", // Add image URL
+                    },
+                    {
+                        id: 5,
+                        title: "Stay Updated",
+                        description:
+                            "Receive timely notifications about new government schemes, policies, and initiatives that can benefit you.",
+                        url: "/features/schemes",
+                        imageUrl: "https://i.imgur.com/gHsDUre.png", // Add image URL
+                    },
+                    {
+                        id: 6,
+                        title: "Take Benefits",
+                        description:
+                            "Access and apply for government schemes directly through the app, ensuring you don’t miss out on any opportunities.",
+                        url: "#take-benefits",
+                        imageUrl: "/images/take-benefits.jpg", // Add image URL
+                    },
+                    {
+                        id: 7,
+                        title: "Help Others",
+                        description:
+                            "Participate in community drives like blood donation camps, cleanliness drives, and more to contribute to society.",
+                        url: "#help-others",
+                        imageUrl: "/images/help-others.jpg", // Add image URL
+                    },
+                ].map((feature) => (
+                    <div
+                        key={feature.id}
+                        className="relative w-full h-auto bg-gray-800 shadow-lg overflow-hidden p-8 rounded-xl transform transition-all duration-300 border-2 border-transparent hover:scale-105 hover:shadow-2xl group
+                        hover:border-indigo-400 rounded-xl"
+                    >
+                        {/* Background overlay with animation */}
+                        <div className="absolute inset-0 bg-black opacity-50 transition-opacity duration-300 group-hover:opacity-30"></div>
+
+                        {/* Number with animation */}
+                        <div className="text-6xl font-bold text-white z-10 mr-4 transition-all duration-300 group-hover:text-indigo-400">
+                            {String(feature.id).padStart(2, "0")}
+                        </div>
+
+                        {/* Content */}
+                        <div className="flex-1">
+                            <h3 className="text-2xl font-bold text-white mb-4 transition-all duration-300 group-hover:text-indigo-400">
+                                {feature.title}
+                            </h3>
+                            <p className="text-gray-300 mb-6 transition-all duration-300 group-hover:text-white">
+                                {feature.description}
+                            </p>
+                            <div className="btn-grp mt-4">
+                                <Link
+                                    href={feature.url}
+                                    className="btn-blue bg-indigo-600 text-white py-3 px-8 rounded-lg inline-block transform transition-all duration-300 hover:bg-indigo-700 hover:scale-110"
+                                    onClick={() => console.log('Link clicked!')}
+                                >
+                                    Read More
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* Image Section */}
+                        <div className="relative w-full h-48 mt-6 rounded-lg overflow-hidden">
+                            <Image
+                                src={feature.imageUrl}
+                                alt={feature.title}
+                                layout='fill'
+                                objectFit="contain"
+                                className="transition-all duration-300 group-hover:scale-110"
+                            />
+                        </div>
+                    </div>
+                ))}
             </div>
-            <div className="project-card-overlay absolute inset-0 bg-black opacity-50"></div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+        </div>
+    );
 }
 
-export default features;
+export default Features;

@@ -65,13 +65,23 @@ function schemes() {
             <div className="max-w-2xl mx-auto">
                 <h1 className="text-4xl font-bold mb-6 text-center">Available Schemes</h1>
                 <div className="project-container max-w-6xl mx-auto flex flex-col items-center gap-10">
-                    {governmentSchemes.map(scheme => ( // Map through the schemes list
-                        <div className="relative w-full max-w-lg bg-gray-600 p-6 shadow-lg overflow-hidden rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl animate-fadeIn" key={scheme.name}>
+                    {governmentSchemes.map((scheme, index) => (
+                        <div key={scheme.name} className="relative w-full max-w-lg bg-gray-800 shadow-lg overflow-hidden p-6 rounded-xl transform transition-all duration-300 border-2 border-transparent hover:scale-105 hover:shadow-2xl group hover:border-indigo-400">
+                            {/* Background overlay with animation */}
+                            <div className="absolute inset-0 bg-black opacity-50 transition-opacity duration-300 group-hover:opacity-30"></div>
+
+                            {/* Number with animation */}
+                            <div className="text-6xl font-bold text-white z-10 mr-4 transition-all duration-300 group-hover:text-indigo-400">
+                                {String(index + 1).padStart(2, "0")}
+                            </div>
+
                             <Image src={scheme.imageUrl} width={800} height={400} alt={scheme.name} className="w-full h-60 object-contain transition-transform duration-300 ease-in-out transform hover:scale-110" />
                             <div className="p-4 bg-gray-900">
                                 <h3 className="text-xl font-bold mb-2">{scheme.name}</h3>
-                                <p className="italic mb-4">{scheme.description}</p>
-
+                                <p className="text-gray-300 mb-4">{scheme.description}</p>
+                                <button className="bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors duration-300">
+                                    Learn More
+                                </button>
                             </div>
                         </div>
                     ))}
@@ -80,14 +90,25 @@ function schemes() {
 
                 <h2 className="text-3xl font-bold mb-6 text-center">Upcoming Events</h2>
                 <div className="event-container max-w-6xl mx-auto flex flex-col items-center gap-10">
-                    {governmentEvents.map(event => ( // Map through the events list
-                        <div className="relative w-full max-w-lg bg-gray-600 p-6 shadow-lg overflow-hidden rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl animate-fadeIn" key={event.name}>
-                            <Image src={event.imageUrl} width={800} height={400} alt={event.name} className="w-full h-60 object-contain transition-transform duration-300 ease-in-out transform hover:scale-110" /> {/* Add image here */}
+                    {governmentEvents.map((event, index) => (
+                        <div key={event.name} className="relative w-full max-w-lg bg-gray-800 shadow-lg overflow-hidden p-6 rounded-xl transform transition-all duration-300 border-2 border-transparent hover:scale-105 hover:shadow-2xl group hover:border-indigo-400">
+                            {/* Background overlay with animation */}
+                            <div className="absolute inset-0 bg-black opacity-50 transition-opacity duration-300 group-hover:opacity-30"></div>
+
+                            {/* Number with animation */}
+                            <div className="text-6xl font-bold text-white z-10 mr-4 transition-all duration-300 group-hover:text-indigo-400 absolute top-4 left-4">
+                                {String(index + 1).padStart(2, "0")}
+                            </div>
+
+                            <Image src={event.imageUrl} width={800} height={400} alt={event.name} className="w-full h-60 object-contain transition-transform duration-300 ease-in-out transform hover:scale-110" />
                             <div className="p-4 bg-gray-900">
                                 <h3 className="text-xl font-bold mb-2">{event.name}</h3>
                                 <p className="italic mb-4">{event.description}</p>
                                 <p className="mb-2">Date: {event.date}</p>
                                 <p className="mb-2">Location: {event.location}</p>
+                                <button className="bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors duration-300">
+                                    Learn More
+                                </button>
                             </div>
                         </div>
                     ))}
