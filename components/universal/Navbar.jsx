@@ -20,25 +20,36 @@ const NavBar = () => {
 
     useEffect(() => {
         switch (pathname) {
+ 
+            case '/features/report' || '/features/schemes':
+                setNavOptions([]); // Set nav options to none for this route
+                break;
             case '/features':
                 setNavOptions([
-                    { label: 'Report your problem', href: '#report' },
-                    { label: 'Data Analytics on Tableau', href: '#analytics' },
-                    { label: 'Document Chatbot', href: '#chatbot' },
-                    { label: 'Schemes & events list', href: '#schemes' },
+                    { label: 'Report problem', href: '/features/report' },
+                    { label: 'Schemes & events list', href: '/features/schemes' },
                 ]);
                 break;
             case '/analytics':
                 setNavOptions([
-                    { label: 'Future Scopes of our project', href: '#future' },
+                    { label: 'Tableau Dashboard', href: '/analytics/tableau' },
+                    { label: 'Document Chatbot', href: '/analytics/docChatbot' }
                 ]);
                 break;
             case '/about':
                 setNavOptions([
-                    { label: 'We are from which college', href: '#college' },
-                    { label: 'Information about us', href: '#info' },
+                    { label: 'College', href: '/about/college' },
+                    { label: 'Information about us', href: '/about/info' },
                 ]);
                 break;
+            case 'future':
+                setNavOptions([
+                    { label: 'Reward System', href: '/future/reward' },
+                    { label: 'Campaign Streamline', href: '/future/campaigns' },
+                ]);
+                break;
+            
+            
             default:
                 setNavOptions([
                     { label: 'Features', href: '/features' },
@@ -55,8 +66,8 @@ const NavBar = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16">
                     <Link href='/' className="flex items-center">
-                        <Image 
-                            src="/assets/US.png" 
+                        <Image
+                            src="/assets/US.png"
                             width={50}
                             height={50}
                             alt='logo'
