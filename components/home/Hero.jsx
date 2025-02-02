@@ -39,7 +39,7 @@ const Hero = () => {
                         </Link>
 
                         <Link
-                            href="https://drive.google.com/file/d/19vgDrTjB9XhkoeBpd5LLBqPVXTQ3MYfP/view?usp=drivesdk"
+                            href="https://youtu.be/GWskDUUN1qI"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-8 py-4 border-2 border-indigo-600 text-indigo-400 rounded-md hover:bg-indigo-700 transform transition-transform hover:scale-105 flex items-center"
