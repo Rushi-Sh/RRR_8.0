@@ -66,12 +66,7 @@ const NavBar = () => {
                     { label: 'Document Chatbot', href: '/analytics/docChatbot' }
                 ]);
                 break;
-            case '/about':
-                setNavOptions([
-                    { label: 'College', href: '/about/college' },
-                    { label: 'Information about us', href: '/about/info' },
-                ]);
-                break;
+            
             case '/future':
                 setNavOptions([
                     { label: 'Reward System', href: '/future/reward' },
@@ -84,7 +79,6 @@ const NavBar = () => {
                     { label: 'Features', href: '/features' },
                     { label: 'Data Analytics', href: '/analytics' },
                     { label: 'Future Scopes', href: '/future' },
-                    { label: 'About us', href: '/about' },
                 ]);
                 break;
         }
