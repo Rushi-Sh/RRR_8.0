@@ -65,14 +65,7 @@ function Features() {
                         url: "#take-benefits",
                         imageUrl: "https://i.imgur.com/wodmahm.png", // Add image URL
                     },
-                    {
-                        id: 7,
-                        title: "Help Others",
-                        description:
-                            "Participate in community drives like blood donation camps, cleanliness drives, and more to contribute to society.",
-                        url: "#help-others",
-                        imageUrl: "/images/help-others.jpg", // Add image URL
-                    },
+                    
                 ].map((feature) => (
                     <div
                         key={feature.id}

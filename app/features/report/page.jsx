@@ -57,14 +57,7 @@ const Report = () => {
                 "Status updates may include: \"Under Review\", \"In Progress\", \"Resolved\""
             ]
         },
-        {
-            title: "Receive Resolution Updates",
-            content: [
-                "You will be notified when your complaint is being processed or resolved.",
-                "Updates will be sent via SMS, email, or within the app.",
-                "You'll be informed once the issue is resolved."
-            ]
-        }
+            
     ];
 
     return (
