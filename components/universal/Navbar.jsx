@@ -75,7 +75,6 @@ const NavBar = () => {
             case '/future':
                 setNavOptions([
                     { label: 'Reward System', href: '/future/reward' },
-                    { label: 'Campaign Streamline', href: '/future/campaigns' },
                 ]);
                 break;
 
