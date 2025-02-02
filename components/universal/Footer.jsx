@@ -46,8 +46,8 @@ const Footer = () => {
 
     return (
         <footer className="bg-gray-900">
-            <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+                {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                     {footerSections.map((section) => (
                         <div key={section.title}>
                             <h3 className="text-white text-sm font-semibold">{section.title}</h3>
@@ -65,7 +65,7 @@ const Footer = () => {
                             </ul>
                         </div>
                     ))}
-                </div>
+                </div> */}
 
                 <div className="mt-8 border-t border-gray-800 pt-8">
                     <div className="flex items-center justify-center">
@@ -76,7 +76,7 @@ const Footer = () => {
                         alt='logo'
                         />
                         <span className="ml-2 text-gray-400">
-                            © {currentYear} UrbanSnap. All rights reserved.
+                            Team RRR. Made for DotSlash 8.0 
                         </span>
                     </div>
                 </div>
