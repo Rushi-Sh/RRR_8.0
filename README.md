@@ -25,7 +25,7 @@ This project aims to enhance civic engagement and streamline the reporting of ur
 
 ## Explanation of the Tech Stack
 The project is built using the following technologies:
-- **Frontend**: Next.js, Tailwind CSS , Python, 
+- **Frontend**: Next.js, Tailwind CSS , Python, React Native
 - **Backend**: Node.js, Express , python  
 - **Database**: MongoDB , imgBB
 - **Deployment**: Vercel, Render 
