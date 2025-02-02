@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
 import { Container } from '@mui/material';
+import { Fullscreen } from 'lucide-react';
 
 function Features() {
     return (
@@ -22,7 +23,7 @@ function Features() {
                         description:
                             "Easily report civic issues like potholes, garbage dumping, or broken streetlights by simply clicking a picture and submitting it through the app.",
                         url: "/features/report",
-                        imageUrl: "/images/report-problems.jpg", // Add image URL
+                        imageUrl: "https://i.imgur.com/IEsccKJ.png", // Add image URL
                     },
                     {
                         id: 2,
@@ -30,7 +31,7 @@ function Features() {
                         description:
                             "Your reports are automatically forwarded to the concerned authorities, ensuring quick action and resolution.",
                         url: "#inform-authorities",
-                        imageUrl: "/images/inform-authorities.jpg", // Add image URL
+                        imageUrl: "https://i.imgur.com/28WTEiE.png", // Add image URL
                     },
                     {
                         id: 3,
@@ -38,7 +39,7 @@ function Features() {
                         description:
                             "Monitor the progress of your reports in real-time, from submission to resolution, with regular updates.",
                         url: "#track-status",
-                        imageUrl: "/images/track-status.jpg", // Add image URL
+                        imageUrl: "https://i.imgur.com/ttp5zAH.png", // Add image URL
                     },
                     {
                         id: 4,
@@ -46,7 +47,7 @@ function Features() {
                         description:
                             "Earn points and rewards for every valid report you submit, which can be redeemed for exclusive benefits.",
                         url: "/future/reward",
-                        imageUrl: "https://i.imgur.com/AKCD3Wj.png", // Add image URL
+                        imageUrl: "https://i.imgur.com/REBenY7.png", // Add image URL
                     },
                     {
                         id: 5,
@@ -54,15 +55,15 @@ function Features() {
                         description:
                             "Receive timely notifications about new government schemes, policies, and initiatives that can benefit you.",
                         url: "/features/schemes",
-                        imageUrl: "https://i.imgur.com/gHsDUre.png", // Add image URL
+                        imageUrl: "https://i.imgur.com/GStsdGk.png", // Add image URL
                     },
                     {
                         id: 6,
                         title: "Take Benefits",
                         description:
-                            "Access and apply for government schemes directly through the app, ensuring you don’t miss out on any opportunities.",
+                            "Access and apply for government schemes and events directly through the app, ensuring you don’t miss out on any opportunities.",
                         url: "#take-benefits",
-                        imageUrl: "/images/take-benefits.jpg", // Add image URL
+                        imageUrl: "https://i.imgur.com/wodmahm.png", // Add image URL
                     },
                     {
                         id: 7,
@@ -75,19 +76,14 @@ function Features() {
                 ].map((feature) => (
                     <div
                         key={feature.id}
-                        className="relative w-full h-auto bg-gray-800 shadow-lg overflow-hidden p-8 rounded-xl transform transition-all duration-300 border-2 border-transparent hover:scale-105 hover:shadow-2xl group
-                        hover:border-indigo-400 rounded-xl"
+                        className="flex relative w-full h-auto bg-gray-800 shadow-lg overflow-hidden p-8 rounded-xl transform transition-all duration-300 border-2 border-transparent hover:scale-105 hover:shadow-2xl group
+                        hover:border-indigo-400"
                     >
-                        {/* Background overlay with animation */}
-                        <div className="absolute inset-0 bg-black opacity-50 transition-opacity duration-300 group-hover:opacity-30"></div>
-
-                        {/* Number with animation */}
-                        <div className="text-6xl font-bold text-white z-10 mr-4 transition-all duration-300 group-hover:text-indigo-400">
-                            {String(feature.id).padStart(2, "0")}
-                        </div>
-
-                        {/* Content */}
+                        {/* Content Section */}
                         <div className="flex-1">
+                            <div className="text-6xl font-bold text-white z-10 mr-4 transition-all duration-300 group-hover:text-indigo-400">
+                                {String(feature.id).padStart(2, "0")}
+                            </div>
                             <h3 className="text-2xl font-bold text-white mb-4 transition-all duration-300 group-hover:text-indigo-400">
                                 {feature.title}
                             </h3>
@@ -106,12 +102,12 @@ function Features() {
                         </div>
 
                         {/* Image Section */}
-                        <div className="relative w-full h-48 mt-6 rounded-lg overflow-hidden">
+                        <div className="relative w-1/2 h-48 mt-6 rounded-lg flex items-center justify-center">
                             <Image
                                 src={feature.imageUrl}
                                 alt={feature.title}
-                                layout='fill'
-                                objectFit="contain"
+                                width={150}
+                                height={100}
                                 className="transition-all duration-300 group-hover:scale-110"
                             />
                         </div>
