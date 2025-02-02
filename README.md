@@ -8,8 +8,8 @@ This project aims to enhance civic engagement and streamline the reporting of ur
 -[Vercel Deployed Link](https://rrr-8-0-website.vercel.app/)
 
 ## Website and App GitHub Repository
-- [Main Website Repository](https://github.com/Rushi-Sh/Dotslash_Model.git)
-- [Main App Repository](https://github.com/Rushi-Sh/Dotslash_backend.git)
+- [Main Website Repository](https://github.com/rajatjoe/RRR-8.0-website-)
+- [Main App Drive Link](https://drive.google.com/drive/folders/1eKH7nwKsQe4EdeJWCfaqSyulVH5jBUqW?usp=sharing)
 
 ## Demo Videos Link for Website and App
 - [Website Demo Video](https://rrr-8-0-website.vercel.app/)
